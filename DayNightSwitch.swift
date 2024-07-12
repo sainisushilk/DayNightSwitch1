@@ -21,7 +21,7 @@ import UIKit
     @IBInspectable var on: Bool {
         didSet {
             
-            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: { 
+            UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: {
                 
                 self.backgroundColor = self.on ? self.onKnobColor : self.offKnobColor
                 
@@ -32,7 +32,7 @@ import UIKit
                 }, completion: nil)
             
             
-            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: { 
+            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: UIView.AnimationOptions.allowUserInteraction, animations: {
                 
                 if let v = self.subview {
                     v.transform = CGAffineTransform(rotationAngle: CGFloat.pi * (self.on ? 0.2 : -0.2))
@@ -363,7 +363,7 @@ import UIKit
     }
     
     override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.touchesEnded(touches , with: event)
+        self.touchesEnded(touches, with: event)
     }
     
     
